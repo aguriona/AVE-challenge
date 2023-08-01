@@ -1,5 +1,6 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import CalculatorScreen from "./components/excercise1";
+import PokemonTypeSelect from "./components/excercise2";
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
         </Container>
       </Navbar>
       <CalculatorScreen/>
-
+      <PokemonTypeSelect/>
     </>
   );
 }
