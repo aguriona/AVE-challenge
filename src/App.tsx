@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-import CalculatorScreen from "./components/excercise1";
-import PokemonTypeSelect from "./components/excercise2";
+import CalculatorScreen from "./components/exercise1";
+import PokemonTypeSelect from "./components/exercise2";
 
 function App() {
 
