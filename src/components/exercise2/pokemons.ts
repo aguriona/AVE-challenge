@@ -85,18 +85,18 @@ export class PokemonApi {
                 weight: response.data.weight,
             }));
             switch (sorter) {
-                case 'name':
-                  pokemons.sort((a, b) => a.name.localeCompare(b.name));
-                  break;
-                case 'type':
-                  pokemons.sort((a, b) => a.type.localeCompare(b.type));
-                  break;
-                case 'weight':
-                  pokemons.sort((a, b) => a.weight - b.weight);
-                  break;
+                case "name":
+                    pokemons.sort((a, b) => a.name.localeCompare(b.name));
+                    break;
+                case "type":
+                    pokemons.sort((a, b) => a.type.localeCompare(b.type));
+                    break;
+                case "weight":
+                    pokemons.sort((a, b) => a.weight - b.weight);
+                    break;
                 default:
-                  throw new Error('Ordenador no valido');
-              }
+                    pokemons.sort((a, b) => a.name.localeCompare(b.name));
+            }
             return pokemons;
         } catch (error) {
             console.error("Error al obtener los pokemons", error);

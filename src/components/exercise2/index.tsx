@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Form, Container, ListGroup, Button } from "react-bootstrap";
 import { PokemonApi, PokemonBasics, PokemonStats } from "./pokemons";
 
@@ -68,7 +68,13 @@ const PokemonTypeSelect = () => {
   };
 
   return (
-    <Container>
+    <Container
+      style={{
+        backgroundColor: "lightsteelblue",
+        paddingTop: 20,
+        paddingBottom: 20,
+      }}
+    >
       <h2>Seleccione un tipo de Pokemon:</h2>
       <Form.Select
         onChange={(e) => setSelectedType1(e.target.value)}
@@ -155,7 +161,10 @@ const PokemonTypeSelect = () => {
           <ListGroup.Item>weight: {pokemon.weight}</ListGroup.Item>
         </ListGroup>
       ))}
-      {console.log("VERIFICADOR --->",verificator)}
+      <div>
+        <h3>Result:</h3>
+        <pre>{JSON.stringify(verificator, null, 2)}</pre>
+      </div>
     </Container>
   );
 };
